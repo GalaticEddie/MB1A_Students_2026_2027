@@ -1,0 +1,13 @@
+---
+title: "Practical_2_Data_Frames_and_Plots/prac2_exercises.qmd"
+author: "Matej Ondruch"
+---
+```{r}
+input_vec <- c(5, -10, 4, -3) 
+result <- input_vec |>
+mean() |>
+abs() |>
+round(digits=0)
+print(result)
+```
+
