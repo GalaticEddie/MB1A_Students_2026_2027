@@ -1,0 +1,65 @@
+---
+title: "Practical_1_Introduction_to_R/prac1_exercises"
+author: "Matej Ondruch"
+---
+```{r}
+library(tidyverse)
+library(gt)
+```
+
+
+```{r}
+round(3.14159, digits=0)
+```
+```{r}
+print(rep(5, 7))
+```
+```{r}
+x <- "hello"
+print(x)
+y <- 16122007
+print(y)
+z <- TRUE
+print(z)
+print(class(x))
+print(class(y))
+print(class(z))
+```
+```{r}
+# for example
+cell_id_1 <- "CX1"
+cell_id_2 <- "CX2"
+
+treated_1 <- TRUE
+treated_2 <- FALSE
+
+n_before_1 <- 5415
+n_before_2 <- 8123
+
+n_after_1 <- 1432
+n_after_2 <- 7543
+
+my_table <- tibble(
+  cell_ID = c(cell_id_1, cell_id_2),
+  treated = c(treated_1,treated_2),
+  num_cells_before = c(n_before_1,n_before_2),
+  bun_cells_after = c(n_after_1,n_after_2)
+)
+gt(my_table)
+```
+
+```{r}
+cell_ID <- c("CX1","CX2")
+treated <- c(TRUE,FALSE)
+num_cells_before <- c(5415,8123)
+num_cells_after <- c(1432,7543)
+```
+```{r}
+all_my_pets <- c("dog", "horse", "guinea pig", "chicken", "cat")
+print(all_my_pets[4])
+```
+```{r}
+weather <- read_csv("data/weather_data.csv")
+gt(weather)
+```
+
